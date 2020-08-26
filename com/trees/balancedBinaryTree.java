@@ -26,7 +26,13 @@ public class balancedBinaryTree {
             System.out.println("Balanced");
         }
 
-
+        Node root2 = new Node(3);
+        root2.left = new Node(4);
+        root2.left.left = new Node(5);
+        if(ifBalanced(root2)==-1)System.out.println("Imbalanced");
+        else{
+            System.out.println("Balanced");
+        }
     }
     
 }
