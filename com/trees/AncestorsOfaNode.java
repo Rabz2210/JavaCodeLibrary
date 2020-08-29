@@ -5,7 +5,8 @@ public class AncestorsOfaNode {
         if(root==null)return false;
         if(root.data==data)return true;
         if(anstr(root.left,data) || anstr(root.right, data)){
-            System.out.println(" "+root.data);
+            System.out.print(" "+root.data);
+            return true;
         }
         return false;
     }
@@ -16,6 +17,6 @@ public class AncestorsOfaNode {
         root.left.left = new Node(4);
         root.left.right = new Node(5);
         root.left.left.left = new Node(7);
-        anstr(root, 3);
+        anstr(root, 5);
     }
 }
