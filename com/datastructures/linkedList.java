@@ -22,7 +22,7 @@ public class linkedList {
         for(String each:ele){
             Node temp = new Node(Integer.parseInt(each));
         }
-        
+        scan.close();
 
     }
     
