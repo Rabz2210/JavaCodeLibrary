@@ -23,4 +23,7 @@ public class spiralTreeUsing2Stack {
                 }
         }
     }
+    public static void main(String[] args) {
+        
+    }
 }
