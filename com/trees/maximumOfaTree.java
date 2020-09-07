@@ -1,6 +1,7 @@
 package com.trees;
 
 public class maximumOfaTree {
+    //This works fine for all values of integers
     public static int maxSearch(Node root, int max){
             if(root==null)return max;
             if(root.data>max)max = root.data;
@@ -8,6 +9,12 @@ public class maximumOfaTree {
             if(max>submax)return max;
             else
             return submax;
+    }
+
+    // This works fine under the condition that none of the node values is 0;
+    public static int maxSearch1(Node root) { 
+        if(root==null)return 0;
+        return Math.max(root.data, Math.max(maxSearch1(root.left), maxSearch1(root.right)));
     }
 
     public static void main(String[] args) {
