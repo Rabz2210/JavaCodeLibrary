@@ -1,18 +1,36 @@
 package com.trees;
 
+//Here are two approches in this file.
+//the first one makes sure that even if one of the subtree is misbalanced, the entire tree is misbalance
+//The second approch keeps track of balance at each and every node , and it's only on the root node it decides that the tree is balanced or not
+
 public class balancedBinaryTree {
+
+    //The first approach
     public static int ifBalanced(Node root){
         if(root==null)return 0;
-        int height = 1;
         int lefth = ifBalanced(root.left);
         int righth = ifBalanced(root.right);
         if(lefth!=-1 || righth!=-1){
             if(Math.abs(lefth-righth)<2){
-                return (height+Math.max(lefth, righth));
+                return (1+Math.max(lefth, righth));
             }else {return -1;}
         }else{
             return -1;
         }
+    }
+
+    //The Second approach
+    public static int checkBal(Node root){
+        if(root==null)return 0;
+        int leftheight = 0;
+        int rightheight = 0;
+        if(root.left!=null){leftheight=1+(checkBal(root.left));}
+        if(root.right!=null){rightheight=1+(checkBal(root.right));}
+        if(Math.abs(leftheight-rightheight)>1){
+            return Math.abs(leftheight-rightheight);
+        }
+        return Math.abs(leftheight - rightheight);
     }
 
     public static void main(String[] args) {
