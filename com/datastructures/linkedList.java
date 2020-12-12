@@ -12,6 +12,7 @@ public class linkedList {
         Node(int data){
             this.data = data;
         }
+        
     }
 
 
@@ -19,6 +20,8 @@ public class linkedList {
         Scanner scan = new Scanner(System.in);
         String[] ele = scan.nextLine().split(" ");
         if(ele[0]!=null)
+        head = new Node(Integer.parseInt(ele[0]));
+
         for(String each:ele){
             Node temp = new Node(Integer.parseInt(each));
         }
