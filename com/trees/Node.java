@@ -1,10 +1,11 @@
 package com.trees;
 
 public class Node {
-    int data;
-    Node left;
-    Node right;
+    public int data;
+    public Node left;
+    public Node right;
 
+    public Node(){};
     public Node(int data) {
         this.data = data;
     }
