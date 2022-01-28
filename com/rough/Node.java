@@ -1,13 +1,12 @@
 package com.rough;
 
 public class Node {
-    public int data;
-    public Node left;
-    public Node right;
-    Node(){}
+    int data;
+    Node next;
 
-    public Node(int data) {
+    Node(){}
+    Node(int data){
         this.data = data;
- 
+        this.next = null;
     }
 }
