@@ -30,7 +30,25 @@ public class plusOneII {
         return digits;
     }
 
-    
+    public static int[] plusOneRecur(int[] digits){
+        
+        return null;
+    }
+
+    public static boolean recursiveAddition(int[] arr, int pos,boolean carryOn){
+
+        if(!carryOn || (pos<0)){
+            return carryOn;
+        }
+        arr[pos]+=1;
+        if(arr[pos]>9){
+            arr[pos]=0;
+            carryOn=true;
+        }else{carryOn=false;}
+        return recursiveAddition(arr, --pos,carryOn);
+    }
+
+
 
     public static void main(String[] args) {
         int[] arr= new int[]{9,9,9,9};
