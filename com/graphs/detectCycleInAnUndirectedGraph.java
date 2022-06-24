@@ -40,6 +40,19 @@ public class detectCycleInAnUndirectedGraph {
         return false;
     }
 
+    public static boolean detectCycleInUndirectedGraphDFS(Integer source, boolean[] visited){
+        visited[source] = true;
+        for(Integer each:arr[source]){
+            if(!visited[each]){
+                visited[each]=true;
+                return detectCycleInUndirectedGraphDFS(each, visited);
+            }else{
+                return true;
+            }
+        }
+
+        return false;
+    }
     public static void main(String[] args) {
         arr = new LinkedList[4];
         for(int i=0;i<4;i++){
