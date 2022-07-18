@@ -14,7 +14,7 @@ public class binarySearchTemplates {
     // In the end, lo crosses hi , so nohting left to explore "hi . lo"
     public static int binarySearch_FirstTemplate(int[] arr,int target){
         int lo = 0;
-        int hi = arr.length;
+        int hi = arr.length-1;
         while(lo<=hi){
             int mid = lo+(hi-lo)/2;
             if(arr[mid]==target)return mid;
